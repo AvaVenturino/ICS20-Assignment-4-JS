@@ -1,0 +1,32 @@
+/* Created by: Ava Venturino
+ * Created on: March 22
+ * This CSS file defines the style for index.html ICS2O-Unit-2-03-JS
+*/
+
+body {
+  background-color: lightgray;
+}
+
+h6 {
+  color: hsl(210deg 15% 43%);
+  padding: 40px;
+  text-align: left;
+}
+
+table {
+  border: solid thin;
+}
+
+th {
+  height: 2rem;
+  background: lightgray;
+  border: 1px solid black;
+  text-align: left;
+}
+
+td {
+  height: 2rem;
+  background: lightgray;
+  border: 1px solid black;
+  text-align: center;
+}

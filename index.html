@@ -34,6 +34,25 @@
         <br>
         <br>
           <center><img src="./images/image2vector (3).svg" style="float:right" alt="pizza" width="40%" height="40%" /></center>
+        <table>
+          <tr>
+          <th>Description</th>
+          <th>Price</th>
+          </tr>
+          <tr>
+            <td> Size </td>
+            <td id="s_result"> </td>
+            <td id="p_result"> </td>
+          </tr>
+          <tr>
+            <td> Toppings </td>
+            <td id="t_options"> </td>
+            <td id="t_result"> </td>
+          </tr>
+        </table>
+        <br>
+        <br>
+        <br>
       <table>
       <tr>
         <th>Size of the Pizza</th>
@@ -79,12 +98,12 @@
           <h6> What size would you like to order?</h6>
           <!--Radio Buttons-->
         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="Large">
-        <input checked class="mdl-radio__button" id="Large" name="size" type="radio"
+        <input checked class="mdl-radio__button" id="s1" name="size" type="radio"
    value="Large">
         <span class="mdl-radio__label">Large Pizza</span>
         </label>
         <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="ExtraLarge">
-        <input class="mdl-radio__button" id="ExtraLarge" name="size" type="radio" value="ExtraLarge">
+        <input class="mdl-radio__button" id="s2" name="size" type="radio" value="ExtraLarge">
         <span class="mdl-radio__label">Extra Large Pizza</span>
         </label>
         <p></p>
@@ -92,37 +111,34 @@
         <br>
           <h6>How many toppings whould you like on your pizza?</h6>
           <!--Radio Buttons-->
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="1Topping">
-        <input checked class="mdl-radio__button" id="1Topping" name="toppings" type="radio"
-   value="1Topping">
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="topping1">
+        <input checked class="mdl-radio__button" id="topping1" name="toppings" type="radio"
+   value="topping1">
         <span class="mdl-radio__label">1 Topping</span>
         </label>
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="2Toppings">
-        <input class="mdl-radio__button" id="2Toppings" name="toppings" type="radio" value="2Toppings">
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="topping2">
+        <input class="mdl-radio__button" id="topping2" name="toppings" type="radio" value="topping2">
         <span class="mdl-radio__label">2 Toppings</span>
         </label>
-          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="3Toppings">
-        <input checked class="mdl-radio__button" id="3Toppings" name="toppings" type="radio"
-   value="3Toppings">
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="topping3">
+        <input checked class="mdl-radio__button" id="topping3" name="toppings" type="radio"
+   value="topping3">
         <span class="mdl-radio__label">3 Toppings</span>
         </label>
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="4Toppings">
-        <input class="mdl-radio__button" id="4Toppings" name="toppings" type="radio" value="4Toppings">
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="topping4">
+        <input class="mdl-radio__button" id="topping4" name="toppings" type="radio" value="topping4">
         <span class="mdl-radio__label">4 Toppings</span>
         </label>
           <p></p>
           <br>
           <br>
         <!-- Raised button with ripple -->
-        <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="myButtonClicked()"
-        >
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="getPizza()">
           Calculate Price
         </button>
         <!-- basic text -->
         <p></p>
-        <div id="responses"></div>
+        <div id="total_result"></div>
       </main>
     </div>
   </body>

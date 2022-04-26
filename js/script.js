@@ -32,13 +32,13 @@ Pizza.prototype.price = function() {
     this.pizzaPrice += 1.00;
   }
 
-  else if (this.toppings == "2Toppings") {
+  if (this.toppings == "2Toppings") {
     this.pizzaPrice += 1.75;
   }
-  else if (this.toppings == "3Toppings") {
+  if (this.toppings == "3Toppings") {
     this.pizzaPrice += 2.50;
   }
-  else if (this.toppings == "4Toppings") {
+  if (this.toppings == "4Toppings") {
     this.pizzaPrice += 3.35;
   }
 

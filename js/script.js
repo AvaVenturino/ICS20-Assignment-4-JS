@@ -8,36 +8,54 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS20-Unit-5-01-JS/sw.js", {
-    scope: "/ICS20-Unit-5-01-JS/",
+  navigator.serviceWorker.register("/ICS20-Assignment-4-JS/sw.js", {
+    scope: "/ICS20-Assignment-4-JS/",
   });
 }
 
-const randomNumber = Math.floor(Math.random() * 6) + 1;
+var pizzaPrice = 0;
 
-/**
- * This function updates the slider value.
- */
-function updateSliderValue(valueFromSlider) {
-  document.getElementById("slider-value").innerHTML = valueFromSlider;
+function Pizza(size,toppings,pizzaPrice); {
+  this.size = size;
+  this.toppings = toppings;
+  this.pizzaPrice = 0;
 }
 
-/**
- * This function compares slider with random number.
- */
-function myButtonClicked() {
-  const sliderValue = slider.value;
+Pizza.prototype.price = function() {
+  if (this.size == "Large") {
+    this.pizzaPrice += 6.00;
+  }
+  else if (this.size == "ExtraLarge") {
+    this.pizzaPrice += 10.00;
+  }
+  if (this.toppings == "1Topping") {
+    this.pizzaPrice += 1.00;
+  }
 
-  // process
-  if (sliderValue == randomNumber) {
-    document.getElementById("answer").innerHTML =
-      "Answer is " + randomNumber + "!" + " Congratulations!";
-    // console.log("Congratulations!")
+  else if (this.toppings == "2Toppings") {
+    this.pizzaPrice += 1.75;
   }
-  //  block of code to be executed if condition1 is true
-  if (sliderValue != randomNumber) {
-    document.getElementById("answer").innerHTML =
-      "Answer is " + randomNumber + "!" + " Try again!";
-    // console.log("Try again!")
+  else if (this.toppings == "3Toppings") {
+    this.pizzaPrice += 2.50;
   }
+  else if (this.toppings == "4Toppings") {
+    this.pizzaPrice += 3.35;
+  }
+
+return this.pizzaPrice;
 }
+
+
+$(document).ready(function(){
+  $("form#pizza").submit(function(event){
+    event.preventDefault();
+
+    var size = $("input[type=radio][name=size]").val();
+    var toppings = $("input[type=radio][name=toppings]").val();
+    var newPizza = new Pizza(size,toppings,pizzaPrice);
+    newPizza.price();
+
+    $("responses").append(" Your total price is " + newPizza.pizzaPrice );
+      
+    });
+});

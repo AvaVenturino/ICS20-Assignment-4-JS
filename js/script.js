@@ -57,7 +57,7 @@ function getPizza() {
 
   document.getElementById("t_result").innerHTML = "$ " + top;
 
-  const total = (size + toppings) * 0.13;
+  total = (size + toppings) * 0.13;
 
   document.getElementById("total_result").innerHTML =
     "Your Current Total is $ " + total;

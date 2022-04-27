@@ -59,8 +59,6 @@ function getPizza() {
 
   document.getElementById("t_result").innerHTML = "$ " + top
 
-  console.log(price)
-  console.log(top)
   tax = (price + top) * 0.13
   total = tax + (price + top)
 

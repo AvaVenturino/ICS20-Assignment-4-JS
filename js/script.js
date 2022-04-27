@@ -21,14 +21,6 @@ if (navigator.serviceWorker) {
   var top = 0
   var total = 0
   var tax = 0
-=======
-// Input
-function getPizza() {
-  var price = 0;
-  var top = 0;
-  var total = 0;
-  var tax = 0;
->>>>>>> origin/main
 
   var s1 = document.getElementById("s1");
   var s2 = document.getElementById("s2");

@@ -12,7 +12,7 @@ if (navigator.serviceWorker) {
     scope: "/ICS20-Assignment-4-JS/",
   });
 }
-// Functions for pizza app
+// Input
 function getPizza() {
   var price = 0;
   var size = "";

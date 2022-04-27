@@ -59,16 +59,9 @@ function getPizza() {
 
   document.getElementById("t_result").innerHTML = "$ " + top
 
-<<<<<<< HEAD
   tax = (price + top) * 0.13
   total = tax + (price + top)
 
   document.getElementById("total_result").innerHTML =
     "Your Current Total is $ " + total.toFixed(2)
-=======
-  //total = (size + toppings) * 0.13;
-
-  //document.getElementById("total_result").innerHTML =
-  //  "Your Current Total is $ " + total;
->>>>>>> origin/main
 }

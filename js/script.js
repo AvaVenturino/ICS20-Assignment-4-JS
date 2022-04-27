@@ -15,7 +15,6 @@ if (navigator.serviceWorker) {
 // Input
 function getPizza() {
   var price = 0
-  var size = ""
   var top = 0
   var total = 0
   var tax = 0
@@ -25,11 +24,13 @@ function getPizza() {
 
   if (s1.checked == true) {
     price = 6.0
-    size = "large"
+    document.getElementById("s_result").innerHTML = "Large";
   } else if (s2.checked == true) {
     price = 10.0
-    size = "extraLarge"
+    document.getElementById("s_result").innerHTML = "Extra Large";
   }
+
+  document.getElementById("p_result").innerHTML = "$ " + price
 
   var t1 = document.getElementById("topping1")
   var t2 = document.getElementById("topping2")
@@ -39,22 +40,22 @@ function getPizza() {
 
   if (t1.checked == true) {
     top = 1.0
-    document.getElementById("t_options").innerHTML = "1topping";
+    document.getElementById("t_options").innerHTML = "1 Topping";
   }
 
   if (t2.checked == true) {
     top = 1.75
-    document.getElementById("t_options").innerHTML = "2topping";
+    document.getElementById("t_options").innerHTML = "2 Toppings";
   }
 
   if (t3.checked == true) {
     top = 2.5
-    document.getElementById("t_options").innerHTML = "3topping"
+    document.getElementById("t_options").innerHTML = "3 Toppings"
   } 
 
   if (t4.checked == true) {
     top = 3.35
-    document.getElementById("t_options").innerHTML = "4topping"
+    document.getElementById("t_options").innerHTML = "4 Toppings"
   }
 
   document.getElementById("t_result").innerHTML = "$ " + top
@@ -65,5 +66,5 @@ function getPizza() {
   total = tax + (price + top)
 
   document.getElementById("total_result").innerHTML =
-    "Your Current Total is $ " + total
+    "Your Current Total is $ " + total.toFixed(2)
 }

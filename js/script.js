@@ -12,8 +12,10 @@ if (navigator.serviceWorker) {
     scope: "/ICS20-Assignment-4-JS/",
   });
 }
-// Input
-function getPizza() {
+/**
+ * Input
+ */
+  function getPizza() {
   var price = 0
   var top = 0
   var total = 0

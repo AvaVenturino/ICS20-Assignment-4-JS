@@ -35,7 +35,6 @@ function getPizza() {
   var t1 = document.getElementById("topping1")
   var t2 = document.getElementById("topping2")
   var t3 = document.getElementById("topping3")
-  console.log(t3)
   var t4 = document.getElementById("topping4")
 
   if (t1.checked == true) {
